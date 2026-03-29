@@ -308,7 +308,6 @@ const Home = () => {
             </motion.div>
 
             <div className="hidden items-center justify-center md:flex lg:justify-end">
-            
               <div className="relative">
                 <motion.div 
                   className="absolute inset-0 scale-110 rounded-full bg-white/10 blur-3xl"
@@ -322,7 +321,7 @@ const Home = () => {
                   style={{ scale: logoScale }}
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
