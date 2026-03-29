@@ -172,7 +172,7 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <section ref={heroRef} className="relative isolate flex min-h-[62vh] items-center overflow-hidden bg-gradient-to-br from-primary via-primary-dark to-blue-950 text-white md:min-h-[68vh]">
+      <section ref={heroRef} className="relative isolate flex min-h-[40vh] items-center overflow-hidden bg-gradient-to-br from-primary via-primary-dark to-blue-950 text-white md:min-h-[68vh]">
         {/* background glow */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-10 -top-16 h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
@@ -245,7 +245,7 @@ const Home = () => {
           />
         </motion.div>
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 md:py-14 lg:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 md:py-8 lg:px-8">
           <div className="grid items-center gap-8 md:grid-cols-2 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
             <motion.div {...fadeInUp} className="max-w-2xl">
               <div className="mb-4 inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-bold text-primary shadow-lg">
@@ -322,7 +322,7 @@ const Home = () => {
                 <motion.img
                   src="/logo.png"
                   alt="Three Rivers Shine"
-                  className="relative z-10 w-full max-w-[360px] animate-float object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)] lg:max-w-[460px]"
+                  className="relative z-10 w-full max-w-[300px] animate-float object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)] lg:max-w-[390px]"
                   style={{ scale: logoScale }}
                 />
               </div>
