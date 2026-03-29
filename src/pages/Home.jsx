@@ -64,10 +64,10 @@ const Home = () => {
   const counter3 = useCounter(24, 1.5)
   
   const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-  }
+  initial: false,
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.2 },
+}
   
   const slideInLeft = {
     initial: { opacity: 0, x: -60 },
@@ -181,18 +181,18 @@ const Home = () => {
         </div>
 
         {/* realistic coded bubbles with parallax */}
-        <motion.div 
-          className="pointer-events-none absolute inset-0 overflow-hidden"
-          style={{ y: bubbleY }}
-        >
+       <motion.div 
+  className="absolute inset-0 overflow-hidden"
+  style={{ y: bubbleY }}
+>
           {bubbleItems.map((bubble, i) => (
             <motion.div
-              key={i}
-              className="absolute rounded-full animate-float bubble-hover cursor-pointer"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: bubble.opacity, scale: 1 }}
-              transition={{ duration: 1, delay: i * 0.2, ease: 'easeOut' }}
-              whileHover={{ scale: 1.1, y: -5 }}
+            key={i}
+            className="absolute rounded-full animate-float bubble-hover cursor-pointer"
+  initial={false}
+  animate={{ opacity: bubble.opacity, scale: 1 }}
+  transition={{ duration: 0.2 }}
+  whileHover={{ scale: 1.06, y: -4 }}
               style={{
                 width: `${bubble.size}px`,
                 height: `${bubble.size}px`,
@@ -247,7 +247,7 @@ const Home = () => {
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 md:py-8 lg:px-8">
           <div className="grid items-center gap-8 md:grid-cols-2 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
-            <motion.div {...fadeInUp} className="max-w-2xl">
+            <div className="max-w-2xl">
               <div className="mb-4 inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-bold text-primary shadow-lg">
                 ⭐ $20 Off Your First Service
               </div>
@@ -307,12 +307,8 @@ const Home = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="hidden items-center justify-center md:flex lg:justify-end"
-            >
+            <div className="hidden items-center justify-center md:flex lg:justify-end">
+            
               <div className="relative">
                 <motion.div 
                   className="absolute inset-0 scale-110 rounded-full bg-white/10 blur-3xl"
