@@ -305,7 +305,7 @@ const Home = () => {
                   <span className="text-xs font-semibold md:text-sm">Eco-Friendly</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             <div className="hidden items-center justify-center md:flex lg:justify-end">
               <div className="relative">
