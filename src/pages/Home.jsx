@@ -675,7 +675,7 @@ const Home = () => {
               <BeforeAfterSlider
                 beforeImage="/before2.jpeg"
                 afterImage="/after2.jpeg"
-                title="Bathroom Deep Clean"
+                title="Kitchen Deep Clean"
               />
             </motion.div>
 
@@ -688,7 +688,7 @@ const Home = () => {
               <BeforeAfterSlider
                 beforeImage="/before3.jpeg"
                 afterImage="/after3.jpeg"
-                title="Living Space Refresh"
+                title="Kitchen Refresh"
               />
             </motion.div>
           </div>
