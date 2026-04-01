@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <img src="/logo.png" alt="Three Rivers Shine Cleaning" className="h-32 lg:h-36 w-auto object-contain mb-4" />
+            <img src="/logo2.png" alt="Three Rivers Shine Cleaning" className="h-32 lg:h-36 w-auto object-contain mb-4" />
             <p className="text-gray-300 text-sm">
               Professional cleaning services for homes and businesses in Pittsburgh.
             </p>

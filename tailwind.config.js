@@ -8,15 +8,18 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#1e3a8a',
-          dark: '#1e40af',
-          light: '#3b82f6',
+          DEFAULT: '#003b70',
+          dark: '#002a50',
+          light: '#0894c6',
         },
         accent: {
-          DEFAULT: '#fbbf24',
-          dark: '#f59e0b',
-          light: '#fcd34d',
+          DEFAULT: '#f9e048',
+          dark: '#e6cc35',
+          light: '#fbea6f',
         },
+        navy: '#003b70',
+        teal: '#0894c6',
+        yellow: '#f9e048',
       },
       animation: {
         'shine': 'shine 2s ease-in-out infinite',

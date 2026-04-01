@@ -19,6 +19,7 @@ import {
   ChevronRight,
   Image as ImageIcon,
 } from 'lucide-react'
+import BeforeAfterSlider from '../components/BeforeAfterSlider'
 
 const Home = () => {
   const heroRef = useRef(null)
@@ -315,7 +316,7 @@ const Home = () => {
                   transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 />
                 <motion.img
-                  src="/logo.png"
+                  src="/logo2.png"
                   alt="Three Rivers Shine"
                   className="relative z-10 w-full max-w-[300px] animate-float object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.35)] lg:max-w-[390px]"
                   style={{ scale: logoScale }}
@@ -647,57 +648,77 @@ const Home = () => {
               See The Difference
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Real results from our professional cleaning services
+              Real results from our professional cleaning services - Drag the slider to compare!
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative group cursor-pointer"
+              transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl overflow-hidden shadow-2xl relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <ImageIcon className="w-20 h-20 text-gray-600" />
-                </div>
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold">
-                  Before
-                </div>
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <p className="text-white text-center px-4">Image placeholder - Add your before photos</p>
-                </div>
-              </div>
+              <BeforeAfterSlider
+                beforeImage="/before1.jpeg"
+                afterImage="/after1.jpeg"
+                title="Kitchen Transformation"
+              />
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative group cursor-pointer"
+              transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-white rounded-2xl overflow-hidden shadow-2xl relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Sparkles className="w-20 h-20 text-accent" />
-                </div>
-                <div className="absolute top-4 left-4 bg-green-500 text-white px-4 py-2 rounded-full font-bold">
-                  After
-                </div>
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <p className="text-white text-center px-4">Image placeholder - Add your after photos</p>
-                </div>
-              </div>
+              <BeforeAfterSlider
+                beforeImage="/before2.jpeg"
+                afterImage="/after2.jpeg"
+                title="Bathroom Deep Clean"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <BeforeAfterSlider
+                beforeImage="/before3.jpeg"
+                afterImage="/after3.jpeg"
+                title="Living Space Refresh"
+              />
             </motion.div>
           </div>
+
+          {/* Video Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-16 max-w-4xl mx-auto"
+          >
+            <h3 className="text-3xl font-bold text-center mb-8">Watch Our Work in Action</h3>
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl">
+              <video
+                controls
+                className="w-full h-full object-cover"
+                poster="/after1.jpeg"
+              >
+                <source src="/WhatsApp Video 2026-03-31 at 23.00.42.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
             className="text-center mt-12"
           >
             <Link

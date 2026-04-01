@@ -23,7 +23,7 @@ const Navbar = () => {
             <img
               src="/logo.png"
               alt="Three Rivers Shine Cleaning"
-              className="h-32 lg:h-36 w-auto object-contain"
+              className="h-24 lg:h-28 w-auto object-contain"
             />
           </Link>
 
